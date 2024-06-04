@@ -11,7 +11,7 @@
 </li>
 
 </ul>
-
+<ContentDoc />
 </div>
 </template>
 
