@@ -1,13 +1,9 @@
 <template>
-  <div>
+  <div style="margin-left: auto; margin-right: auto; max-width: 560px;">
 
     <nav>
       <NuxtLink to="/">Home</NuxtLink>
-      <ContentNavigation v-slot="{ navigation }">
-        <NuxtLink v-for="link of navigation" :key="link._path" :to="link._path">
-          {{ link.navTitle || link.title }}
-        </NuxtLink>
-      </ContentNavigation>
+      <Navi />
     </nav>
 
     <NuxtPage />
