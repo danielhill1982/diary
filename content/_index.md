@@ -1,5 +1,8 @@
 ---
-title: Blog
+title: 'Home'
+description: 'meta description of the page'
+date: '31.05.2024'
 ---
 
-::blog-posts
+
+# Index

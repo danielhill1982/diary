@@ -1,16 +1,13 @@
 <template>
   <div>
-    
+
     <nav>
-      <ContentNavigation v-slot="{ navigation }" :query="posts">
-  <NuxtLink
-    v-for="link of navigation"
-    :key="link._path"
-    :to="link._path"
-  >
-    {{ link.navTitle || link.title }}
-  </NuxtLink>
-</ContentNavigation>
+      <NuxtLink to="/">Home</NuxtLink>
+      <ContentNavigation v-slot="{ navigation }">
+        <NuxtLink v-for="link of navigation" :key="link._path" :to="link._path">
+          {{ link.navTitle || link.title }}
+        </NuxtLink>
+      </ContentNavigation>
     </nav>
 
     <NuxtPage />
@@ -26,11 +23,6 @@
 </template>
 
 <script setup>
-const posts = queryContent('/blog')
-.sort({ date: -1 }) // show latest articles first
-.where({ _partial: false }) // exclude the Partial files
-.find()
-
 const colorMode = useColorMode()
 
 console.log(colorMode.preference)
@@ -39,12 +31,14 @@ console.log(colorMode.preference)
 <style>
 body {
   background-color: #fff;
-  color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
+
 .dark-mode body {
   background-color: #091a28;
   color: #ebf4f1;
 }
+
 .sepia-mode body {
   background-color: #f1e7d0;
   color: #433422;

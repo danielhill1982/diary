@@ -1,9 +1,10 @@
 ---
-title: 'Montag'
+title: 'Info'
 description: 'meta description of the page'
-date: '03.06.2024'
+date: '01.06.2024'
 ---
 
 
+# Info
 
-# Montag
+[Back home](/)
